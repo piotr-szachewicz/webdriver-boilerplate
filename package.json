@@ -7,10 +7,16 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "selenium-standalone": "^6.9.0",
+    "wdio-selenium-standalone-service": "^0.0.9",
     "webdriverio": "^4.8.0"
   },
   "devDependencies": {
     "wdio-dot-reporter": "0.0.9",
     "wdio-mocha-framework": "^0.5.11"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/selenium-standalone/bin/selenium-standalone install",
+    "test": "./node_modules/.bin/wdio wdio.conf.js",
+    "help": "./node_modules/.bin/wdio --help"
   }
 }
